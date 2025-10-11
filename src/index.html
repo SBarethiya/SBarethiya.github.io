@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrishti Barethiya — Portfolio</title>
+  <style>
+    :root {
+      --accent: #0077cc;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #222;
+    }
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .pubs li { margin-bottom: 1rem; }
+    .news li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shrishti Barethiya</h1>
+  <p>PhD in Computational Chemistry</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#news">News</a>
+    <a href="cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a PhD candidate in Computational Chemistry at UMass Amherst. 
+    My work combines molecular modeling, molecular dynamics, and machine learning to solve biological problems.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <ul>
+      <li><strong>Generative modeling for IDP emsembles</strong> — using latent DDPM.</li>
+      <li><strong>Biophysics based variant effect predictor</strong> — combing the physics-based features with CNN and GCN models.</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="pubs">
+      <li>M. Tasmin, <strong>S. Barethiya</strong>, Y. Wang, L. Kang, A. Green, and J. Chen. “ Forecasting Antibiotic Resistance in <em>Mycobacterium tuberculosis</em> using Biophysics and Machine Learning.” (in preparation), 2025. </li>
+      <li><strong>S. Barethiya</strong> J. Huang, H. Guan, and J. Chen. “Overcoming Extrapolation Challenges of Deep Learning by Incorporating Physics in Protein Sequence-Function Modeling .” (Submitted), 2025. </li>
+      <li><strong>S. Barethiya</strong>*, S.Schultz*, Y. Zhang, and J. Chen. “, Coarse-Grained Simulations of Phosphorylation Regulation of p53 Autoinhibition.” <em>Biochemistry</em>, 2025. <a href="#">10.1021/acs.biochem.4c00668</a></li>
+      <li>. B. Nordquist*, G. Zhang*, <strong>S. Barethiya</strong>, N. Ji, K. M. White, L. Han, Z. Jia, J. Shi, J. Cui, and J. Chen. “Incorporating physics to overcome data scarcity in predictive modeling of protein function: a case study of BK channels.” <em>PLOS Computational Biology</em>, 2023. <a href="#">10.1371/journal.pcbi.1011460</a></li>
+      <li>L. Zheng*, <strong>S. Barethiya</strong>, E. B. Nordquist, and J. Chen. “Machine learning generation of dynamic protein conformational ensembles.” <em>Molecules</em>, 2023. <a href="#">10.3390/molecules28104047</a></li>
+    </ol>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>2025-08-26</time> — Poster presentation at ResearchFest 2025.</li>
+      <li><time>2025-02-17</time> — Poster presentation at Biophysical Society 69th Annual Meeting.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Shrishti Barethiya · <a href="mailto:sbarethiya@umass.edu">sbarethiya@umass.edu</a>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

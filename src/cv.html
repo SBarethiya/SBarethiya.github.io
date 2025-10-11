@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #222;
+    }
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Name</h1>
+  <nav>
+    <a href="index.html#about">About</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#news">News</a>
+    <a href="cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Curriculum Vitae</h2>
+  <p>Below is my full CV. If it doesn’t load, you can <a href="assets/cv.pdf" target="_blank">open it directly</a>.</p>
+
+  <!-- Embed your PDF -->
+  <iframe src="assets/cv.pdf"></iframe>
+</main>
+
+<footer>
+  © <span id="year"></span> Shrishti Barethiya · <a href="mailto:sbarethiya@umass.edu">you@example.com</a>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
