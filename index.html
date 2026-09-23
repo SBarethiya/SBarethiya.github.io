@@ -1,92 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shrishti Barethiya — Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css" >
-  <style>
-    :root {
-      accent: #0077cc;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #fdfdfd;
-      color: #222;
-    }
-    header {
-      background: var(accent);
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      border-bottom: 2px solid var(accent);
-
-      padding-bottom: 0.25rem;
-      margin-bottom: 1rem;
-    }
-    footer {
-      background: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    .pubs li { margin-bottom: 1rem; }
-    .news li { margin-bottom: 0.5rem; }
-  </style>
+  <meta charset="UTF-8">
+  <script>
+    (function(){
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch(e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrishti Barethiya — PhD Candidate</title>
+  <meta name="description" content="Shrishti Barethiya is a PhD candidate in Computational Chemistry at UMass Amherst, working on generative modeling of protein ensembles and physics-informed machine learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;600;700&family=Helvetica+Neue+4:opsz,wght@8..60,400;8..60,600&family=monospace:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" >
 </head>
 <body>
 
-<header>
-  <h1>Shrishti Barethiya</h1>
-  <p>PhD Candidate in Computational Chemistry</p>
-  <nav>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="news.html">News</a>
-    <a href="resume.html">Resume</a>
-  </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/portrait.jpeg" alt="" class="avatar" width="34" height="34">
+      <span class="brand-text">Shrishti Barethiya<span class="brand-sub"></span></span>
+    </a>
+    <div class="nav-group">
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
 </header>
 
-<main>
-    <h2>Welcome</h2>
-    <p>Welcome to my portfolio website. Explore my research, publications, and news updates.</p>
-    <h2>About</h2>
-    <p>I am a PhD candidate in Computational Chemistry at UMass Amherst. My work combines molecular modeling, molecular dynamics, and machine learning to solve biological problems.</p>
+<main id="main">
+  <div class="wrap">
+
+    <section aria-labelledby="about-heading">
+     <div class="section-head">
+       <h2 id="about-heading">Working at the intersection of biophysics and machine learning</h2>
+     </div>
+     <div class="about-grid">
+       <div>
+         <p class="justify-text">I am a PhD candidate in Computational Biophysics at University of Massachusetts Amherst. I am studying the biomolecules by utilizing machine learning and biophysics based methods. Specifically, my work combines molecular modeling, molecular dynamics, and machine learning to study intrinsically disordered proteins and their ensembles. Also, how the mutations in a protein sequence can perturbe its function.</p> 
+
+         <p class="justify-text">Currently, I working under the guidance of <a href="https://people.chem.umass.edu/jchenlab/">Prof. Jianhan Chen</a>. By working in Chen's lab, I have gained extensive experience in molecular dynamics simulations of both structured and disordered proteins, variant effect predictors, generative models for proteins conformational ensembles, large and extensive dataset development and management. Also, I got the opportunity to collaborate with many resechers from different fields and resulted in the successful projects. Additionally, I got the opportunity to present my research in several platforms and conferences.</p>
+
+
+         <p class="justify-text">Previously, I have completed my integrated masters from <a href="https://www.niser.ac.in/">National Institute of Science Education and Research (NISER) Bhubaneswar, India</a> under the guidance of <a href="https://www.niser.ac.in/~u.lourderaj/">Prof. Upakarasamy Lourderaj</a> in 2022. Here, I worked on developing traditional machine learing models to represent potential energy surfaces of 3-dimensional systems including small molecules, and models for the predicting the outcome from initial postions and velocities for enhancing the sampling for the rare states.</p>
+
+         <p class="justify-text">Looking ahead, I am currently seeking industry positions, particularly in biopharma, biotech, and AI-driven drug discovery that require in-depth knowledge of machine learning, molecular dynamics simulations, molecular modeling, and data science.</p>
+        </div>
+       <div>
+          <figure class="portrait">
+            <img src="assets/portrait.jpeg" alt="Portrait of Shrishti Barethiya">
+          </figure>
+          <ul class="fact-list">
+            <li><span class="k">Institution</span><span class="v">UMass Amherst</span></li>
+            <li><span class="k">Program</span><span class="v">Chemistry, PhD (2022 - 2027)</span></li>
+            <li><span class="k">Focus</span><span class="v">Molecular dynamics &middot; Machine learning &middot; Computational biophysics</span></li>
+            <li><span class="k">Email</span><span class="v"><a href="mailto:sbarethiya@umass.edu">sbarethiya@umass.edu</a></span></li>
+            <li><span class="k">Github</span><span class="v"><a href="https://github.com/SBarethiya">SBarethiya</a></span></li>
+            <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/shrishti-barethiya/">shrishti-barethiya</a></span></li>
+          </ul>
+       </div>
+     </div>
+    </section>
+  </div>    
 </main>
 
-<footer>
-  © <span id="year"></span> Shrishti Barethiya · <a href="mailto:sbarethiya@umass.edu">sbarethiya@umass.edu</a>
+<footer class="site-footer">
+  <div class="wrap">
+    <span> <span id="year"></span> Shrishti Barethiya</span> 
+    <div class="foot-links">
+     <a href="mailto:sbarethiya@umass.edu">sbarethiya@umass.edu</a>
+    </div>
+  </div>
 </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
