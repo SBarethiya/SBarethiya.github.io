@@ -543,7 +543,7 @@ section > .wrap > h2, .section-head h2 {
   box-shadow: 0 0 0 4px var(--paper);
 }
 .tl-date {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: 1.20rem;
   color: var(--ink-faint);
   letter-spacing: 0.02em;
